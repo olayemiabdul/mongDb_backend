@@ -954,7 +954,7 @@ process.on('unhandledRejection', (reason, promise) => {
 const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`Gas Monitor Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`Database: ${process.env.MONGODB_URI ? 'Configured' : 'Not configured'}`);
+  console.log(`Database: ${pprocess.env.AZURE_COSMOS_CONNECTIONSTRING || process.env.MONGODB_URI? 'Configured' : 'Not configured'}`);
   console.log(`Server ready to accept connections`);
 });
 
